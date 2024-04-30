@@ -11,6 +11,17 @@ class Graph {
     addEdge(origin, destination) {
         this.adjacencyList.get(origin).push(destination);
     }
+
+    removeNode(nodename) {
+        this.adjacencyList.delete(nodename);
+        for(let e of this.adjacencyList){
+            e[1].map((item, index) => {
+                if(e === nodename){
+                    e[1].splice(index, 1);
+                }
+            });
+        }
+    }
 }
 
 const adjacencyList = new Map();
@@ -24,5 +35,9 @@ G1.addEdge('A', 'B');
 G1.addEdge('A', 'C');
 G1.addEdge('B', 'D');
 G1.addEdge('C', 'D');
+
+console.log(G1);
+
+G1.removeNode('D');
 
 console.log(G1);
