@@ -22,6 +22,18 @@ class Graph {
             });
         }
     }
+
+    removeEdge(origin, destination) {
+        for (let ele of this.adjacencyList) {
+            if (ele[0] === origin) {
+                ele[1].map((item, index) => {
+                    if (item === destination) {
+                        ele[1].splice(index, 1);
+                    }
+                });
+            }
+        }
+    }
 }
 
 const adjacencyList = new Map();
@@ -38,6 +50,7 @@ G1.addEdge('C', 'D');
 
 console.log(G1);
 
-G1.removeNode('D');
+//G1.removeNode('D');
+G1.removeEdge('A', 'C');
 
 console.log(G1);
