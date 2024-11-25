@@ -18,8 +18,7 @@ const users = [
         age: 56,
     },
 ];
-users.sort((user1, user2) => user1.age < user2.age ? -1 : 1)
-const names = users.filter((user) => user.isActive).map((user) => user.name);
+const names = users.sort((user1, user2) => user1.age < user2.age ? -1 : 1).filter((user) => user.isActive).map((user) => user.name);
 
 console.log(names);
 
