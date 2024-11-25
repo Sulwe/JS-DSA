@@ -39,4 +39,4 @@ function matrix(n) {
     return result;
 }
 
-console.log(matrix(4));
+console.log(matrix(10));
