@@ -15,8 +15,9 @@ const users = [
         isActive: false,
     },
 ];
+let names = [];
 
-let names = users.map(user => user.name);
+users.forEach((user) => user.isActive? names.push(user.name) : 0)
 
 console.log(names);
 
