@@ -16,12 +16,7 @@ const users = [
     },
 ];
 
-let names = []
-
-for( let user of users){
-    names.push(user.name);
-    
-}
+names = users.map(user => user.name);
 
 console.log(names);
 
