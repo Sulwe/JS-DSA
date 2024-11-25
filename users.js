@@ -16,7 +16,7 @@ const users = [
     },
 ];
 
-names = users.map(user => user.name);
+let names = users.map(user => user.name);
 
 console.log(names);
 
