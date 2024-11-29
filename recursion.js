@@ -1,10 +1,10 @@
 function pow(x, n) {
-    let result = 1;
-
-    for (let i = 0; i < n; i ++) {
-        result = result * x;
-    }
-    return result;
+   if (n === 0){
+    return 1;
+   }
+   else {
+    return x * pow(x, n - 1)
+   }
 }
 
-console.log(pow(10, 3));
+console.log(pow(10, 0));
